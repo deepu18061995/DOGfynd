@@ -1,0 +1,55 @@
+<% include ./partials/header %>
+<!--<h1>this is a seller page</h1>-->
+<!--<form action="/home" method="post">-->
+<!--    <input type"text" placeholder="seller name" name="dog[name]">-->
+<!--    <input type"text" placeholder="breed" name="dog[breed]">-->
+<!--    <input type"text" placeholder="dogs image" name="dog[image]">-->
+<!--    <input type"number" placeholder="contact " name="dog[contact]">-->
+<!--    <input type"number" placeholder="dogs age" name="dog[age]">-->
+<!--    <input type="text" placeholder="price of a dog" name="dog[price]">-->
+<!--    <input type="text" placeholder="description" name="dog[description]">-->
+<!--    <button>Submit info</button>-->
+<!--</form>-->
+<div class="container">
+    <h2 style="text-align:center; margin:60px 20px 20px 20px;">Add new dog</h2>
+    <div style="width:40%; margin:0 auto;">
+    <form action="/home" method="post">
+      
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="seller name" name="dog[name]" required>
+    
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="breed" name="dog[breed]" required>
+        
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="dog image url" name="dog[image]" required>
+        
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" placeholder="contact info" name="dog[contact]" required>
+    
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" placeholder="dog's age" name="dog[age]" required>
+    
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="price" name="dog[price]" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="location" name="dog[location]" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Say something about your dog" name="dog[description]" >
+      </div>
+
+      
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+    </form>
+    </div>
+</div>    

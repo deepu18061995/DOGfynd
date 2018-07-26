@@ -1,0 +1,54 @@
+<% include ./partials/header %>
+    <div class="container" style="margin:40px auto;">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+          <h1 class="my-4"><%=dog.name%></h1>
+          <div class="list-group">
+            <a  class="list-group-item">Phone: <%=dog.contact%></a>
+            <a  class="list-group-item">Posted on: <%=dog.created.toDateString()%></a>
+            <a  class="list-group-item">price: Rs <%=dog.price%>/-</a>
+          </div>
+          <a href="/home" class="btn btn-lg btn-success my-4">Back To Homepage</a>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+          <div class="card mt-4">
+            <img class="card-img-top" src="<%=dog.image%>" alt="" style="height:60%; width:60%; margin:auto auto;">
+            <div class="card-body">
+              <h3 class="card-title"><%=dog.breed%></h3>
+              <h4>Rs <%=dog.price%>.00/-</h4>
+              <p class="card-text"><%=dog.description%></p>
+              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+              4.0 stars
+            </div>
+          </div>
+          <!-- /.card -->
+
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+              Comments
+            </div>
+            
+            
+            <div class="card-body">
+            <%dog.comment.forEach(function(comment){ %>
+                
+              <p><%=comment.text%></p>
+              <small class="text-muted">Posted by-<%=comment.author%></small>
+              <hr>
+              
+            <% }) %>
+
+              <a href="/home/<%=dog._id%>/comment/new" class="btn btn-success">Leave a Review</a>
+            </div>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>

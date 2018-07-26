@@ -1,0 +1,22 @@
+<%include ./partials/header%>
+<div class="container">
+    <h2 style="text-align:center; margin:60px 20px 20px 20px;">Login</h2>
+    <div style="width:40%; margin:0 auto;">
+    <form action="/login" method="post">
+      
+
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="username" name="username" required>
+    
+      </div>
+
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="password" name="password" required>
+        
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+      <a class="btn btn-lg btn-success btn-block" href="/register">Not A User? Register Here</a>
+      <p class="mt-5 mb-3 text-muted text-center">&copy; 2018-2019</p>
+    </form>
+    </div>
+</div> 

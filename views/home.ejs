@@ -1,0 +1,39 @@
+<% include ./partials/header %>
+<div class="container">
+ <div class="jumbotron text-white rounded bg-dark">
+        <div class="col-md-10 px-0">
+          <h1 class="display-6 font-italic">ANIMALS</h1>
+          <p class="lead my-4">Animals, they are one of the most beautiful gifts we have and, you know, if there are people that have compassion, there are very few people that put their money into animal rescue organizations. And if there is someone that has that passion, animals need all the help they can get.</p>
+         
+        </div>
+      </div>
+      
+      <div class="row flex">
+          <% dog.forEach(function(dogs){ %>
+            <div class="col-md-4">
+                
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="<%=dogs.image%>" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text"><%=dogs.description%></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/home/<%=dogs._id%>" class="btn btn-sm btn-outline-secondary">View More</a>
+                    </div>
+                    <small class="text-muted"><%=dogs.created.toDateString()%></small>
+                  </div>
+                   
+                </div>
+               
+              </div>
+              
+            </div>
+            <% }) %>
+        
+</div>      
+
+    
+     
+
+
+
